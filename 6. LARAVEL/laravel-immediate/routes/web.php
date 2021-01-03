@@ -18,14 +18,5 @@ use App\Http\Controllers\SubmitController;
 */
 
 Route::get('/', function () {
-    return redirect('/routing');
+    return "hello";
 });
-
-Route::view('/view', 'beginner-laravel.5-tanpa-controller');
-Route::view('/routing', 'beginner-laravel.6-ini-routing');
-Route::get('/controller/{user}', [Controller1::class, 'index']);
-Route::view('/component', 'beginner-laravel.8-ini-component');
-Route::get('/blade', [BladeController::class, 'index']);
-Route::get('/blade2', [Blade2Controller::class, 'index']);
-Route::post('/submit', [SubmitController::class, 'store']);
-Route::get('/view-submit', [SubmitController::class, 'create']);
